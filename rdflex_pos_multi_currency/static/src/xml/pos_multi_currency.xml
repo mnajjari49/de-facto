@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates id="template" xml:space="preserve">
+    <t t-extend="PaymentScreenWidget">
+        <t t-jquery="div[class='payment-buttons']" t-operation="after">
+            <div class="currency-buttons">
+                <t t-call="PyamentCurrecy"/>
+            </div>
+        </t>
+    </t>
+    <t t-name="PyamentCurrecy">
+        <t t-foreach="widget.pos.multi_currencies" t-as="currency">
+            <div t-att-data-currency="currency.id" t-attf-class='button js_currency_change #{widget.pos.get_order().get_currency().id == currency.id ? "highlight" : ""}'>
+                <i aria-label="Currency" class="fa" role="img" title="Currency">
+                    <strong>
+                        <t t-esc="currency.symbol"/>
+                    </strong>
+                </i>
+                <span t-esc="currency.name"/>
+            </div>
+        </t>
+    </t>
+</templates>

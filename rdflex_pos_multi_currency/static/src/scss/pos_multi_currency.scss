@@ -1,0 +1,44 @@
+.pos .currency-buttons {
+    display: inline-block;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 16px;
+    padding-left: 0;
+    float: right;
+    .button {
+        background: #e2e2e2;
+        line-height: 66px;
+        margin-top: 10px;
+        font-size: 16px;
+        padding: 0px 8px;
+        border: solid 1px rgb(200,200,200);
+        border-top-width: 0;
+        cursor: pointer;
+        text-align: center;
+        position: relative;
+        transition: background-color, border-color, color 150ms linear;
+        &:hover {
+            background-color: #efefef;
+        }
+        .fa {
+            position: absolute;
+            left: 11px;
+            top: 50%;
+            width: 48px;
+            height: 48px;
+            line-height: 48px;
+            margin-top: -25px;
+            vertical-align: middle;
+            border-radius: 26px;
+            border: 1px solid rgba(0,0,0,0.2);
+            border-image-source: initial;
+            border-image-slice: initial;
+            border-image-width: initial;
+            border-image-outset: initial;
+            border-image-repeat: initial;
+            background: rgba(255,255,255,0.4);
+            font-size: 20px;
+            transition: all 150ms linear;
+        }
+    }
+}
